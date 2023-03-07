@@ -1,4 +1,4 @@
-\documentclass[SE,authoryear,toc]{lsstdoc}
+\documentclass[SE,authoryear,toc,lsstdraft]{lsstdoc}
 \input{meta}
 
 % Package imports go here.
@@ -15,7 +15,7 @@
 % \setDocSubtitle{A subtitle}
 
 \author{%
-Keith Bechtol
+Keith Bechtol, Anastasia Alexov, Chuck Claver, Leanne Guy, Robert Lupton, Kevin Reil, Steve Ritz, Austin Roberts
 }
 
 \setDocRef{SITCOMTN-061}
@@ -27,7 +27,7 @@ Keith Bechtol
 % \setDocCurator{The Curator of this Document}
 
 \setDocAbstract{%
-Technical description of System First Light milestone 
+This document provides a proposed technical description of the System First Light milestone to clarify and the expected state of the system and relationship to other Construction milestones.
 }
 
 % Change history defined here.
@@ -48,6 +48,43 @@ Technical description of System First Light milestone
 
 % ADD CONTENT HERE
 % You can also use the \input command to include several content files.
+
+\section{Overview}
+
+\textbf{System First Light} is an intermediate technical milestone between recording the first on-sky images with LSSTCam and the start of the 10-year LSST survey that represents
+\begin{itemize}
+  \item retirement of substantial technical risks to overall system performance,
+  \item reduced uncertainty on the remaining Construction schedule, and
+  \item an increased emphasis on bulk data collection to support commissioning science verification and validation activities.
+\end{itemize}
+
+The System First Light milestone will be used by Rubin Observatory Operations to more accurately gauge the start date of the 10-year LSST survey and to prepare for Early Science, including Data Preview 1 and routine Alert Production \citedsp{RTN-011} \href{https://rtn-011.lsst.io/}.
+As of early 2023, it is expected that Data Preview 1 will be based on a subset of science-grade images taken with LSSTCam during a period of a few days around the System First Light milestone.
+System First Light is also a widely publicized milestone for external stakeholders (e.g., \href{https://ls.st/dates}{ls.st/dates}), with anticipated celebratory events, media coverage, and release of images to preview the scientific potential of Rubin Observatory (e.g., color coadd images and difference images to illustrate the detection of transient, variable, and/or moving objects).
+
+In our terminology, \textbf{First Photon} is the milestone corresponding to first on-sky photons passing through the fully integrated optical system and being recorded with LSSTCam, and is understood as primarily a functional demonstration.
+By comparison, the System First Light milestone is met when we can routinely acquire science-grade imaging across the full focal plane and have a well understood technical path towards meeting the Construction Completeness criteria \citedsp{SITCOMTN-005} with minimal technical or schedule risks.
+
+\section{Detailed Definition}
+
+By the System First Light milestone, we are confident that
+
+\begin{enumerate}
+  \item members of the commissioning team (not necessarily Operations team) are able to point the telescope to any right ascension and declination $(\alpha, \delta)$ coordinate with airmass $\leq 2$ and acquire science images for at least 1 hour without interruption,
+  \item those data can be characterized with respect to metrics defined for Priority 1a requirements from the LSR \citedsp{LSE-29} and OSS \citedsp{LSE-30} related to single-visit image quality in the $r$ band + at least two of the $giz$ bands,
+  \item those data meet the following specifications for intrinsic system performance:
+  \begin{enumerate}
+    \item median system contribution to delivered image quality (adjusted to zenith) less than 0.7 arcseconds across the full focal plane ($r$ and $i$ images),
+    \item median system throughput integral (atmosphere removed or using a standard atmosphere) known to within 10\% uncertianty to meet fiducial system performance defined in the SRD,
+    \item LSSTCam system read noise, area covered by live science pixels, and dynamic range re-verified in situ to meet expectations,
+  \end{enumerate}
+  \item system telemetry, raw and basic ISR-corrected images, as well as diagnostics for single-visit science performance sampled at multiple locations on the focal plane are visible to observers on the summit within 5 minutes of acquiring the visits,
+  \item following automated data transfer and ingest at USDF, the data management system is functionally capable of both building a 3-band color coadd image from these data and producing a difference image with acceptable ``press-ready'' aesthetics, and
+  \item there exists a well understood technical path towards satisfying the Construction Completeness criteria with minimal technical or schedule risks, including meeting Priority 1 science requirements by the start of LSST 10-year survey at the minimal thresholds specified in the SRD.
+\end{enumerate}
+
+In order to achieve the milestone, the commissioning team should have reasonable expectation that the criteria above can be met on any given night, e.g., based on three or more consecutive nights of stable performance.
+
 
 \appendix
 % Include all the relevant bib files.
