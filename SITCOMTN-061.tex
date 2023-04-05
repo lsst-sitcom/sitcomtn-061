@@ -83,38 +83,42 @@ First Photon is primarily a functional demonstration, whereas SFL includes addit
 By the System First Light milestone, we are confident that
 
 \begin{enumerate}
-  \item members of the commissioning team (not necessarily Operations team) are able to observe any set of target fields with airmass $\leq 2$ and acquire science images for at least an hour without interruption at a cadence similar to the baseline LSST survey (i.e., visits per hour with each visit corresponding to a 30-second total exposure),
+  \item members of the commissioning team (not necessarily Operations team) are able to observe any set of target fields with airmass $\leq 2$ and acquire science images for at least an hour without interruption at a cadence similar to the baseline LSST survey (i.e., $\sim90$ visits per hour with each visit corresponding to a standard 30-second total exposure),
   %point the telescope to any right ascension and declination $(\alpha, \delta)$ coordinate with airmass $\leq 2$ and acquire science images for at least 1 hour without interruption,
   %\item members of the commissioning team (not necessarily Operations team) are able to point the telescope to any right ascension and declination $(\alpha, \delta)$ coordinate with airmass $\leq 2$ and acquire science images for at least 1 hour without interruption,
   \item those data can be characterized using metrics defined for Priority 1a requirements from the LSR \citedsp{LSE-29} and OSS \citedsp{LSE-30} related to single-visit image quality in the $r$ band + at least two of the $giz$ bands,
   \item those data meet the following specifications for intrinsic system performance to be acceptable for LSST science:
   \begin{enumerate}
-    \item median system contribution to delivered image quality (adjusted to zenith) less than 0.7 arcseconds across the full focal plane for $r$- and $i$-band images \footnote{For comparison, the SRD minimum specification (Table 9) corresponds a 0.4 arcsecond system contribution to delivered image quality.
-    To achieve SFL, the active optics system (AOS) will control the figures of M1M3 and M2 optical surfaces and the camera focus and alignment at a range of pointing elevations.
-    System optimization including the AOS, dome environment, TMA tracking, etc., to surpass the SRD design specification for delivered image quality is anticipated to continue between the SFL milestone and start of LSST 10-year survey.}
-    \item median system throughput integral (atmosphere removed or using a standard atmosphere) known to within 10\% uncertianty to meet fiducial system performance design specifications defined in the SRD (Table 6),
+    \item median system contribution to delivered image quality (adjusted to zenith) less than 0.7 arcseconds across the full focal plane for $r$- and $i$-band images
+    %\footnote{For comparison, the SRD minimum specification (Table 9) corresponds a 0.4 arcsecond system contribution to delivered image quality.
+    %To achieve SFL, the active optics system (AOS) will control the figures of M1M3 and M2 optical surfaces and the camera focus and alignment at a range of pointing elevations.
+    %System optimization including the AOS, dome environment, TMA tracking, etc., to surpass the SRD design specification for delivered image quality is anticipated to continue between the SFL milestone and start of LSST 10-year survey.}
+    \item median system throughput integral (atmosphere removed or using a standard atmosphere) known to within 10\% uncertianty to meet minimum specifications defined in the SRD (converted to image deoth for point sources as in Table 6),
     \item performance of the LSSTCam as installed on the TMA is consistent with expectations based on acceptance testing at SLAC and re-verification on Level 3, and consistent with supporting SRD requirements (e.g., system read noise, usable pixel fraction, dynamic range),
   \end{enumerate}
   \item system telemetry, raw and basic ISR-corrected images, as well as diagnostics for single-visit science performance sampled at multiple locations on the focal plane are visible to observers on the summit within 5 minutes of acquiring the visits,
   \item following automated data transfer and ingest at USDF, the data management system is functionally capable of both building a 3-band color coadd image and producing difference images from these data that have sufficient information content to support creation of ``press-ready'' images,
-  \item there exists a well understood technical path towards satisfying the Construction Completeness criteria \citedsp{SITCOMTN-005} with minimal technical or schedule risks, including meeting all performance requirements in the SRD at the minimum specifications or better during the LSST 10-year survey.
+  \item there exists a well understood technical path towards satisfying the Construction Completeness criteria \citedsp{SITCOMTN-005} with minimal technical or schedule risks, including meeting all performance requirements in the SRD at their minimum specifications or better during the LSST 10-year survey.
   %Priority 1 science requirements by the start of LSST 10-year survey at the minimum thresholds specified in the SRD in all requirements.
 \end{enumerate}
 
-In order to achieve the milestone, the commissioning team should have reasonable expectation that the criteria above can be met on any given night, e.g., based on three or more consecutive nights of stable performance.
+In order to achieve the milestone, the commissioning team should have reasonable expectation that the criteria above can be met on any given night, for example, based on three or more consecutive nights of stable performance when observing fields at a range of airmass from 1.0 to 2.0.
+This level of routine functional and science performance is needed to support bulk data collection to complete commissioning science verification and validation.
 
+In addition, at least a subset of $r$- and $i$-band visits prior to SFL that span a range of airmass from 1.0 to 2.0 should have system contribution to delivered image quality (adjusted to zenith) less than 0.4 arcseconds across the full focal plane to demonstrate that the as-built hardware and software is \emph{capable} of meeting minimum SRD specifications with appropriate control of the AOS, telescope tracking, dome environment, etc., even if this level of performance is not yet \emph{routinely} achieved at the time of SFL.
+The commissioning plan includes a period of system optimization following SLF that is intended to enhance the stability of the system across a range of observing conditions.
 
 \section{Example Test Dataset to Support System First Light Milestone}
 \label{dataset}
 
-The criteria listed in Section \ref{criteria} could be verified with the following example test dataset that could be acquired in roughly an hour of on-sky observations (roughly $\sim90$ visits, assuming each visit is $\sim40$ seconds for integration, readout, and slew).
+The criteria listed in Section \ref{criteria} could be verified with the following example test dataset that could be acquired in roughly an hour of on-sky observations (roughly $\sim90$ visits, assuming each visit is $\sim40$ seconds for integration, readout, and slew) taken on each of three nights.
 Take repeated observations of a field (e.g., 30 visits in each of the $gri$ bands) with translational dithers ranging for detector-scale up to focal-plane scale so that individual stars are measured on multiple detectors across the focal plane.
 The number of visits is chosen to approximate the number of overlapping visits that would be acquired during the first year of the LSST Wide-Fast-Deep survey over a region of $\sim10$ square degrees.
-For a typical high Galactic latitude density of $\sim1$ Gaia reference star per square arcminute, this would correspond to measurements of roughly $\sim3 \times 10^4$ high SNR stars, and $\sim1$ million individual measurements of the PSF sampled across the focal plane.
+For a typical high Galactic latitude density of $\sim1$ Gaia reference star per square arcminute, this region would include measurements of roughly $\sim3 \times 10^4$ high SNR stars, and $\sim1$ million individual measurements of the PSF sampled across the focal plane.
 
 In practice, we plan that such observations would be acquired as part of a larger ``dense dithered star field'' science program with multiple fields, observed in at least 5 bands, in multiple epochs spread across several nights.
-For example, 5 fields $\times$ 30 visits $\times$ 6 bands $\times$ 4 epochs with 600 visits per night could be acquired in 6 nights of observing.
-The epochs could be selected to observe the same field at multiple airmasses.
+For example, 4 fields $\times$ 30 visits $\times$ 5 bands $\times$ 3 epochs with 600 visits per night could be acquired in 3 full nights of observing, or 6 half-nights of observing.
+The epochs and fields should be selected to sample observations at a range of airmass, e.g., 1.0, 1.4, and 2.0.
 These data would enable multiple science verification studies, including
 \begin{itemize}
   \item determination of illumination correction, photometric repeatability, and chromatic part of instrumental throughput (same star through multiple detectors)
@@ -122,7 +126,7 @@ These data would enable multiple science verification studies, including
   \item initial testing of coaddition and difference imaging.
 \end{itemize}
 
-A subset of these images could also form the basis of Data Preview 1.
+A subset of these images could potentially form the basis of Data Preview 1.
 
 \appendix
 % Include all the relevant bib files.
