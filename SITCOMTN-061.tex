@@ -105,28 +105,37 @@ By the System First Light milestone, we are confident that
 In order to achieve the milestone, the commissioning team should have reasonable expectation that the criteria above can be met on any given night, for example, based on three or more consecutive nights of stable performance when observing fields at a range of airmass from 1.0 to 2.0.
 This level of routine functional and science performance is needed to support bulk data collection to complete commissioning science verification and validation.
 
-In addition, at least a subset of $r$- and $i$-band visits prior to SFL that span a range of airmass from 1.0 to 2.0 should have system contribution to delivered image quality (adjusted to zenith) less than 0.4 arcseconds across the full focal plane to demonstrate that the as-built hardware and software is \emph{capable} of meeting minimum SRD specifications with appropriate control of the AOS, telescope tracking, dome environment, etc., even if this level of performance is not yet \emph{routinely} achieved at the time of SFL.
+As part of establishing a well understood technical path towards satisfying the Construction Completeness criteria, at least a subset of $r$- and $i$-band visits prior to SFL (spanning a range of airmass from 1.0 to 2.0) should have system contribution to delivered image quality (adjusted to zenith) less than 0.4 arcseconds across the full focal plane to demonstrate that the as-built hardware and software is \emph{capable} of meeting minimum SRD specifications with appropriate control of the AOS, telescope tracking, dome environment, etc., even if this level of performance is not yet \emph{routinely} achieved at the time of SFL.
 The commissioning plan includes a period of system optimization following SLF that is intended to enhance the stability of the system across a range of observing conditions.
 
 \section{Example Test Dataset to Support System First Light Milestone}
 \label{dataset}
 
-The criteria listed in Section \ref{criteria} could be verified with the following example test dataset that could be acquired in roughly an hour of on-sky observations (roughly $\sim90$ visits, assuming each visit is $\sim40$ seconds for integration, readout, and slew) taken on each of three nights.
+\subsection{Minimal Dataset}
+
+The criteria listed in Section \ref{criteria} could be verified with the following example ``mimimal'' test dataset that could be acquired in roughly an hour of on-sky observations (roughly $\sim90$ visits, assuming each visit is $\sim40$ seconds for integration, readout, and slew) taken on each of three nights.
 Take repeated observations of a field (e.g., 30 visits in each of the $gri$ bands) with translational dithers ranging for detector-scale up to focal-plane scale so that individual stars are measured on multiple detectors across the focal plane.
 The number of visits is chosen to approximate the number of overlapping visits that would be acquired during the first year of the LSST Wide-Fast-Deep survey over a region of $\sim10$ square degrees.
 For a typical high Galactic latitude density of $\sim1$ Gaia reference star per square arcminute, this region would include measurements of roughly $\sim3 \times 10^4$ high SNR stars, and $\sim1$ million individual measurements of the PSF sampled across the focal plane.
+For the minimal dataset, the observing epochs spread across multiple nights do not need to cover the same field, but should span a range of airmass, e.g., 1.0, 1.4, and 2.0, to demonstrate stable performance.
 
-In practice, we plan that such observations would be acquired as part of a larger ``dense dithered star field'' science program with multiple fields, observed in at least 5 bands, in multiple epochs spread across several nights.
+\subsection{Baseline Dataset}
+
+In practice, we plan that the minimal set of observations above would be acquired as part of a larger ``dense dithered star field'' science program with multiple fields, observed in at least 5 bands, in multiple epochs spread across several nights.
 For example, 4 fields $\times$ 30 visits $\times$ 5 bands $\times$ 3 epochs with 600 visits per night could be acquired in 3 full nights of observing, or 6 half-nights of observing.
-The epochs and fields should be selected to sample observations at a range of airmass, e.g., 1.0, 1.4, and 2.0.
-These data would enable multiple science verification studies, including
+The epochs and fields should be selected to sample observations at a range of airmass, e.g., 1.0, 1.4, and 2.0, with the repeated epochs for a given field scheduled on distinct nights to sample a larger time baseline.
+By slewing between multiple fields spanning a range of telescope elevations within a single night, we could verify the AOS performance to maintain the figure of optical surfaces for gravitational forces at a range of telescope orientations.
+30 consecutive visits of the same field in the same band within a single epoch is desireable to achieve stable environmental conditions and isolate effects related to the instrumental calibration (e.g., illumination correction, camera distortion model).
+Scheduling multiple epochs of the same fields allows for tests of difference imaging and characterization of performance across a range of environmental conditions.
+
+The larger ``baseline'' dataset would enable multiple science verification studies, including
 \begin{itemize}
-  \item determination of illumination correction, photometric repeatability, and chromatic part of instrumental throughput (same star through multiple detectors)
+  \item determination of illumination correction, photometric repeatability, and chromatic part of instrumental throughput (same star through multiple detectors),
   \item determination of camera distortion model, astrometric repeatability, relationship between DCR and chromatic PSF, and
   \item initial testing of coaddition and difference imaging.
 \end{itemize}
 
-A subset of these images could potentially form the basis of Data Preview 1.
+A subset of these images could form the basis of Data Preview 1 \citedsp{RTN-011}.
 
 \appendix
 % Include all the relevant bib files.
