@@ -93,7 +93,7 @@ By the System First Light milestone, we are confident that
     %\footnote{For comparison, the SRD minimum specification (Table 9) corresponds a 0.4 arcsecond system contribution to delivered image quality.
     %To achieve SFL, the active optics system (AOS) will control the figures of M1M3 and M2 optical surfaces and the camera focus and alignment at a range of pointing elevations.
     %System optimization including the AOS, dome environment, TMA tracking, etc., to surpass the SRD design specification for delivered image quality is anticipated to continue between the SFL milestone and start of LSST 10-year survey.}
-    \item median system throughput integral (atmosphere removed or using a standard atmosphere) known to within 10\% uncertianty to meet minimum specifications defined in the SRD (converted to image deoth for point sources as in Table 6),
+    \item median system throughput integral (atmosphere removed or using a standard atmosphere) known to within 10\% uncertianty to meet minimum specifications defined in the SRD (converted to image depth for point sources as in Table 6),
     \item performance of the LSSTCam as installed on the TMA is consistent with expectations based on acceptance testing at SLAC and re-verification on Level 3, and consistent with supporting SRD requirements (e.g., system read noise, usable pixel fraction, dynamic range),
   \end{enumerate}
   \item system telemetry, raw and basic ISR-corrected images, as well as diagnostics for single-visit science performance sampled at multiple locations on the focal plane are visible to observers on the summit within 5 minutes of acquiring the visits,
@@ -103,10 +103,12 @@ By the System First Light milestone, we are confident that
 \end{enumerate}
 
 In order to achieve the milestone, the commissioning team should have reasonable expectation that the criteria above can be met on any given night, for example, based on three or more consecutive nights of stable performance when observing fields at a range of airmass from 1.0 to 2.0.
-This level of routine functional and science performance is needed to support bulk data collection to complete commissioning science verification and validation.
+This level of routine functional and science performance, with acceptable observing efficiency, is needed to support bulk data collection to complete commissioning science verification and validation, e.g., the Science Validation survey.
 
 As part of establishing a well understood technical path towards satisfying the Construction Completeness criteria, at least a subset of $r$- and $i$-band visits prior to SFL (spanning a range of airmass from 1.0 to 2.0) should have system contribution to delivered image quality (adjusted to zenith) less than 0.4 arcseconds across the full focal plane to demonstrate that the as-built hardware and software is \emph{capable} of meeting minimum SRD specifications with appropriate control of the AOS, telescope tracking, dome environment, etc., even if this level of performance is not yet \emph{routinely} achieved at the time of SFL.
+
 The commissioning plan includes a period of system optimization following SLF that is intended to enhance the stability of the system across a range of observing conditions.
+For the baseline AOS commissioning plan, we expect that validation of the open-loop (look-up table) and closed-loop systems considering the full set of degrees of freedom can utilize the same set of imaging data collected for the science validation survey (except for a brief period of full array mode out-of-focus data to validate the sensitivity matrix).
 
 \section{Example Test Dataset to Support System First Light Milestone}
 \label{dataset}
@@ -114,10 +116,10 @@ The commissioning plan includes a period of system optimization following SLF th
 \subsection{Minimal Dataset}
 
 The criteria listed in Section \ref{criteria} could be verified with the following example ``mimimal'' test dataset that could be acquired in roughly an hour of on-sky observations (roughly $\sim90$ visits, assuming each visit is $\sim40$ seconds for integration, readout, and slew) taken on each of three nights.
-Take repeated observations of a field (e.g., 30 visits in each of the $gri$ bands) with translational dithers ranging for detector-scale up to focal-plane scale so that individual stars are measured on multiple detectors across the focal plane.
+Take repeated observations of a field (e.g., 30 visits in each of the $gri$ bands) with translational dithers ranging from detector-scale up to focal-plane scale so that individual stars are measured on multiple detectors across the focal plane.
 The number of visits is chosen to approximate the number of overlapping visits that would be acquired during the first year of the LSST Wide-Fast-Deep survey over a region of $\sim10$ square degrees.
 For a typical high Galactic latitude density of $\sim1$ Gaia reference star per square arcminute, this region would include measurements of roughly $\sim3 \times 10^4$ high SNR stars, and $\sim1$ million individual measurements of the PSF sampled across the focal plane.
-For the minimal dataset, the observing epochs spread across multiple nights do not need to cover the same field, but should span a range of airmass, e.g., 1.0, 1.4, and 2.0, to demonstrate stable performance.
+For the minimal dataset, the observing epochs spread across multiple nights do not necessarily need to cover the same field, but should span a range of airmass, e.g., 1.0, 1.4, and 2.0, to demonstrate stable performance.
 
 \subsection{Baseline Dataset}
 
@@ -125,7 +127,7 @@ In practice, we plan that the minimal set of observations above would be acquire
 For example, 4 fields $\times$ 30 visits $\times$ 5 bands $\times$ 3 epochs with 600 visits per night could be acquired in 3 full nights of observing, or 6 half-nights of observing.
 The epochs and fields should be selected to sample observations at a range of airmass, e.g., 1.0, 1.4, and 2.0, with the repeated epochs for a given field scheduled on distinct nights to sample a larger time baseline.
 By slewing between multiple fields spanning a range of telescope elevations within a single night, we could verify the AOS performance to maintain the figure of optical surfaces for gravitational forces at a range of telescope orientations.
-30 consecutive visits of the same field in the same band within a single epoch is desireable to achieve stable environmental conditions and isolate effects related to the instrumental calibration (e.g., illumination correction, camera distortion model).
+30 visits of the same field in the same band within a single epoch is desireable to achieve stable environmental conditions and isolate effects related to the instrumental calibration (e.g., illumination correction, camera distortion model).
 Scheduling multiple epochs of the same fields allows for tests of difference imaging and characterization of performance across a range of environmental conditions.
 
 The larger ``baseline'' dataset would enable multiple science verification studies, including
