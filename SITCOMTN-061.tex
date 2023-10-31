@@ -1,4 +1,4 @@
-\documentclass[SE,authoryear,toc,lsstdraft]{lsstdoc}
+\documentclass[SE,authoryear,toc]{lsstdoc}
 \input{meta}
 
 % Package imports go here.
@@ -27,11 +27,9 @@ Keith Bechtol, Anastasia Alexov, Chuck Claver, Leanne Guy, Robert Lupton, Kevin 
 % \setDocCurator{The Curator of this Document}
 
 \setDocAbstract{%
-System First Light (SFL) is an intermediate technical milestone between recording the first on-sky images with LSSTCam and the start of the 10-year LSST survey.
-The SFL milestone is met when we can routinely acquire science-grade imaging across the full focal plane, and have a well understood technical path towards meeting the Construction Completeness criteria.
-This document provides a technical definition of the SFL milestone, and describes an example test dataset that could be used to verify that these criteria have been satisfied.
-%The System First Light (SFL) milestone
-%to clarify and the expected state of the system and relationship to other Construction milestones.
+System First Light is an intermediate technical milestone between recording the first on-sky images with the LSST Science Camera (LSSTCam) and the start of the 10-year LSST survey.
+System First Light is defined as the point at which we can routinely acquire science-grade imaging across the full LSSTCam focal plane and have a well understood technical path towards meeting the Construction Completeness criteria.
+This document provides a technical definition of the System First Light milestone, and describes an example test dataset that could be used to verify that these criteria have been satisfied.
 }
 
 % Change history defined here.
@@ -39,7 +37,7 @@ This document provides a technical definition of the SFL milestone, and describe
 % Fields: VERSION, DATE, DESCRIPTION, OWNER NAME.
 % See LPM-51 for version number policy.
 \setDocChangeRecord{%
-  \addtohist{1}{YYYY-MM-DD}{Unreleased.}{Keith Bechtol}
+  \addtohist{1}{2023-10-30}{Initial Release}{Keith Bechtol}
 }
 
 
@@ -56,23 +54,24 @@ This document provides a technical definition of the SFL milestone, and describe
 \section{Overview}
 \label{overview}
 
-\textbf{System First Light} (SFL) is an intermediate technical milestone between recording the first on-sky images with LSSTCam and the start of the 10-year LSST survey.
-\emph{The SFL milestone is met when we can routinely acquire science-grade imaging across the full focal plane}, and have a well understood technical path towards meeting the Construction Completeness criteria \citedsp{SITCOMTN-005}.
-The SFL milestone represents
+\textbf{System First Light} is an intermediate technical milestone between recording the first on-sky images with the LSST Science Camera (LSSTCam) and the start of the 10-year LSST survey.
+System First Light is defined as the point at which we can routinely acquire science-grade imaging across the LSSTCam full focal plane and have a well understood technical path towards meeting the Construction Completeness criteria \citedsp{SITCOMTN-005}.
+The System First Light milestone represents
 
 \begin{itemize}
-  \item formal retirement of major technical risks to overall system performance (including delivered image quality and system throughput),
+  \item the retirement of major technical risks to overall system performance (including delivered image quality and system throughput),
   \item reduced uncertainty on the remaining Construction schedule, and
   \item an increased emphasis on bulk data collection to support science verification and validation activities leading up to the Operations Readiness Review.
 \end{itemize}
 
-Section \ref{criteria} provides a set of quantitative criteria to define the SFL milestone, and Section \ref{dataset} describes an example test dataset.
+Section \ref{criteria} provides a set of quantitative criteria to define the System First Light milestone, and Section \ref{dataset} describes an example test dataset.
 
 The System First Light milestone will be used by Rubin Observatory Operations to more accurately gauge the start date of the 10-year LSST survey and to prepare for Early Science, including the Data Previews and start of Alert Production \citedsp{RTN-011} \href{https://rtn-011.lsst.io/}.
 As of early 2023, it is expected that Data Preview 1 will be based on a subset of science-grade images taken with LSSTCam during a period of a few days around the System First Light milestone.
 System First Light is also a widely publicized milestone for external stakeholders (e.g., \href{https://ls.st/dates}{ls.st/dates}), with anticipated celebratory events, media coverage, and release of images to preview the scientific potential of Rubin Observatory (e.g., color coadd images and difference images to illustrate the detection of transient, variable, and/or moving objects).
 
-\textbf {LSSTCam First Photon}: The first image of the night sky produced by photons passing through the Rubin optical system and detected by the LSST Science Camera (LSSTCam).
+In current planning, System First Light follows 2-3 months of on-sky engineering activities that begin with LSSTCam First Photon.
+\textbf {LSSTCam First Photon} is defined as the first image of the night sky produced by photons passing through the Rubin optical system and detected by LSSTCam.
 %In contrast to SFL, \textbf{First Photon} is the milestone corresponding to first on-sky photons passing through the fully integrated optical system and being recorded with LSSTCam.
 LSSTCam First Photon is primarily a functional demonstration, whereas SFL includes additional criteria on science performance and fitness for bulk data collection.
 %and is understood as primarily a functional demonstration.
@@ -106,7 +105,7 @@ By the System First Light milestone, we are confident that
 In order to achieve the milestone, the commissioning team should have reasonable expectation that the criteria above can be met on any given night, for example, based on three or more consecutive nights of stable performance when observing fields at a range of airmass from 1.0 to 2.0.
 This level of routine functional and science performance, with acceptable observing efficiency, is needed to support bulk data collection to complete commissioning science verification and validation, e.g., the Science Validation survey.
 
-As part of establishing a well understood technical path towards satisfying the Construction Completeness criteria, at least a subset of $r$- and $i$-band visits prior to SFL (spanning a range of airmass from 1.0 to 2.0) should have system contribution to delivered image quality (adjusted to zenith) less than 0.4 arcseconds across the full focal plane to demonstrate that the as-built hardware and software is \emph{capable} of meeting minimum SRD specifications with appropriate control of the AOS, telescope tracking, dome environment, etc., even if this level of performance is not yet \emph{routinely} achieved at the time of SFL.
+As part of establishing a well understood technical path towards satisfying the Construction Completeness criteria, at least a subset of $r$- and $i$-band visits prior to System First Light (spanning a range of airmass from 1.0 to 2.0) should have system contribution to delivered image quality (adjusted to zenith) less than 0.4 arcseconds across the full focal plane to demonstrate that the as-built hardware and software is \emph{capable} of meeting minimum SRD specifications with appropriate control of the AOS, telescope tracking, dome environment, etc., even if this level of performance is not yet \emph{routinely} achieved at the time of System First Light.
 
 The commissioning plan includes a period of system optimization following SLF that is intended to enhance the stability of the system across a range of observing conditions.
 For the baseline AOS commissioning plan, we expect that validation of the open-loop (look-up table) and closed-loop systems considering the full set of degrees of freedom can utilize the same set of imaging data collected for the science validation survey (except for a brief period of full array mode out-of-focus data to validate the sensitivity matrix).
